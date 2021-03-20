@@ -1,0 +1,35 @@
+ .header{
+       height: 600px;
+       background-position: center center;
+       background-size: 100% 100%;
+     }
+     .header .logo{
+       height: 50px;
+       float: left;
+       color:orange;
+       padding-left: 50px;
+     } 
+     .nav{
+         margin-left: 600px;
+     }
+       .nav li{
+       display: inline;
+       margin-left: 50px;
+    }
+    .nav a{
+       text-decoration: none;
+       color:orange;
+       padding-top:50px;
+      }
+     .nav button{
+        margin-top:30px;
+        margin-bottom: 10px;
+        text-align: center;
+
+      }
+      .title-container{
+        color: rgba(255, 255, 255, 0.699);
+        text-align: center;
+        font-size: 2em;
+    }
+   
