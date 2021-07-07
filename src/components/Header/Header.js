@@ -30,8 +30,8 @@ return (
           </nav>
 
           <div className="title-container">
-                <h1>Start Cool Trip With Trooper Trip</h1>
-                <h2>Request A Trip</h2>
+                <h2>Start Cool Trip With Trooper Trip</h2>
+                <h3>Request A Trip</h3>
             </div>
       </div>
     );
