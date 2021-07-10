@@ -1,11 +1,10 @@
 .login{
     text-align: center;
-    height:300px;
-    width:400px;
-    margin-left: 450px;
+    height:600px;
+    width:450px;
     border: 1px solid green;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left:600px;
+   
 }
 .input{
     margin-top: 5px;

@@ -1,12 +1,11 @@
 import React from 'react';
 
 const Ride = (props) => {
-    const {imgUrl, title} = props.ride;
-    const imgStyle = {height:'350px',border: '1px solid red', margin:'10px',padding:'10px'}
+    const {img, title} = props.ride;
      
     return (
-        <div style={imgStyle}>
-             <img src={imgUrl} alt=""/>
+        <div className="col-md-3">
+             <img style={{height:'150px'}} src={img} alt=""/>
              <h1>{title}</h1>
         </div>
         

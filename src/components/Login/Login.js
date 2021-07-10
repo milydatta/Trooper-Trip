@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import './Login.css';
+import header from '../../images/header.png';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
@@ -105,33 +106,44 @@ const handleGoogleSignIn = () => {
              event.preventDefault();
           }
     return (
-      
+      <div style={{ backgroundImage:`url(${header})`}}  className="header">
         <div className="login">
-               {
-                 user.isSignedIn ? <button onClick={handleSignOut} >Sign out</button> :
-                 <button onClick={handleGoogleSignIn} >Sign in</button>
-               }
+        <h1 className="mt-5 text-white mb-3">Create Account</h1>
              {
                 user.isSignedIn && <div>
                 <p>Welcome,{user.name}</p>
                 <p>Your email: {user.email}</p>
                </div>
              }
-            <h1>Login with Trooper</h1>
+            
             <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id=""/>
-             <label htmlFor ="newUser">New User Sign Up</label>
+             <label htmlFor ="newUser" className="text-white mb-3">New User Sign Up</label>
             <form onSubmit={handleSubmit}>
-            <input className="input" type="text" onBlur={handleBlur} name="email" placeholder="Your Email address" required/>
+            <div class="form-group">
+            <label for="exampleInputEmail1" className="text-white">Email address</label>
+            <input className="form-control input" type="email" onBlur={handleBlur} name="email" placeholder="Your Email address" required/>
+            </div>
             <br/>
-            <input className="input" type="password" name="password" onBlur={handleBlur} placeholder="Your Password" required/>
+            <div class="form-group">
+            <label for="exampleInputPassword1" className="text-white">Password</label>
+            <input className="form-control input" type="password" name="password" onBlur={handleBlur} placeholder="Your Password" required/>
+            </div>
+            <input className="btn btn-success" type="submit" value="Submit"/>
             <br/>
-            <input  type="submit" value="Submit"/>
-            </form>
-            <div className="btn">
-            <button onClick={handleGoogleSignIn}>Sign In With Google</button>
+            <div class="form-group">
+              <label for="exampleInputEmail1" className="text-white">already have an account?</label>
+            {
+                 user.isSignedIn ? <button onClick={handleSignOut} >Sign out</button> :
+                 <button className="btn btn-success ms-2" onClick={handleGoogleSignIn} >Sign in</button>
+               }
+               </div>
+                </form>
+            <div className="btn-lg">
+            <button  className="form-control input btn btn-success" onClick={handleGoogleSignIn}>Sign In With Google</button>
             </div>
             <p style={{color:'red'}}>{user.error}</p>
             {user.success && <p style={{color:'green'}}>User {newUser ? 'created' : 'Logged In'} successfully</p>}
+        </div>
         </div>
     );
 };

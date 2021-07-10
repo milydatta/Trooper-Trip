@@ -1,33 +1,31 @@
  .header{
-       height: 600px;
+       height: 800px;
        background-position: center center;
        background-size: 100% 100%;
      }
      .header .logo{
+       color:white;
+       margin-left: 50px;
        height: 50px;
-       float: left;
-       color:orange;
        padding-left: 50px;
      } 
      .nav{
-         margin-left: 600px;
+         padding-top: 30px;
+         margin-left: 700px;
      }
+
        .nav li{
        display: inline;
        margin-left: 50px;
     }
     .nav a{
        text-decoration: none;
-       color:orange;
+       color:white;
        padding-top:50px;
-      }
-     .nav button{
-        margin-top:30px;
-        margin-bottom: 10px;
-        text-align: center;
-
+       font: 70px;
       }
       .title-container{
+        padding-top: 200px;
         color: rgba(255, 255, 255, 0.699);
         text-align: center;
         font-size: 2em;

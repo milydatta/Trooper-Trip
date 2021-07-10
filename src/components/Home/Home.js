@@ -1,44 +1,43 @@
 import React from 'react';
-// import Header from '../Header/Header';
- import Ride from '../Ride/Ride'
+import Header from '../Header/Header';
+import Ride from '../Ride/Ride';
+import bike from '../../images/bike.png';
+import car from '../../images/car.png';
+import bus from '../../images/bus.png';
+import train from '../../images/train.png';
 
 const Home = () => {
-    const style = {
-        display: 'flex',
-        margin: '40px',
-        height:'200px',
-        width: '200px',
-        justifyContent: 'space-between'
-    }
-
 
     const rides =[
         {
-            imgUrl:'https://images-na.ssl-images-amazon.com/images/I/71C4Wn-ctcL._SX355_.jpg',
-            title:'Cool Trip'
+            img:bike,
+            title:'bike'
         },
         {
-            imgUrl:'https://images-na.ssl-images-amazon.com/images/I/71%2B-nIoLdFL._SX355_.jpg',
-            title:'Cool Trip'
+            img:car,
+            title:'car'
         },
         {
-            imgUrl:'https://image.shutterstock.com/image-vector/kids-toys-red-cartoon-kid-260nw-1408378007.jpg',
-            title:'Cool Trip'
+            img:bus,
+            title:'bus'
         },
-        // {
-        //     imgUrl:'https://image.shutterstock.com/image-photo/small-train-daming-palace-national-260nw-1323698975.jpg',
-        //     title:'Cool Trip'
-        // }
+        {
+            img:train,
+            title:'train'
+        }
     ]
     return (
-        
-        <div style={style}>
+          <div>
+              <Header></Header>
+          <div className="d-flex justify-content-center">
+          <div className="w-75 row mt-5 pt-5">
            {
               rides.map(ride => <Ride ride={ride}></Ride>)
            }
         </div>
+        </div>
 
-       
+        </div>
     );
 };
 

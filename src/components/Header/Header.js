@@ -1,16 +1,15 @@
 import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
-import { Button} from '@material-ui/core';
 import header from '../../images/header.png';
 
  const Header = () => {
   
 return (
       <div  style={{ backgroundImage:`url(${header})` }}  className="header">
-        <h1 className="logo">Trooper Trip</h1>
-        <nav className="nav">
-          <ul>
+        <h1 className="logo mt-5 fixed-top">Trooper Trip</h1>
+        <nav className="nav fixed-top">
+          <ul  className="mt-3">
             <li>
                 <Link to="/home">Home</Link>
             </li>
@@ -24,15 +23,15 @@ return (
                 <Link to="/contact">Contact</Link>
             </li>
             <li>
-               <Button variant="contained" color="primary" className="button"><Link to="/login">Login</Link></Button>
+              <button className="btn btn-success text-white"><Link to="/login">Login</Link></button>
             </li>
             </ul>
           </nav>
-
-          <div className="title-container">
-                <h2>Start Cool Trip With Trooper Trip</h2>
+           <div className="title-container">
+                <h1>Start Cool Trip With Trooper Trip</h1>
                 <h3>Request A Trip</h3>
             </div>
+      
       </div>
     );
   }

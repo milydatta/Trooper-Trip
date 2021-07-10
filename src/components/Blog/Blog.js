@@ -1,9 +1,12 @@
 import React from 'react';
+import header from '../../images/header.png';
 
 const Blog = () => {
     return (
         <div>
-            <h1>this is blog</h1>
+             <div  style={{ backgroundImage:`url(${header})`}}  className="header">
+                <h1 style={{textAlign: 'center',paddingTop:150,color: 'white'}}>Blog</h1>
+             </div>
         </div>
     );
 };
