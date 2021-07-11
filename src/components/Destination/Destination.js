@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from '../Sidebar/Sidebar';
 import Map from '../../images/Map.png';
 import './Destination.css';
+import { UserContext } from '../../App';
+
+
+
 
 const Destination = () => {
+    
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+
+
     return (
         <section>
             <div className="fixed-top">
@@ -22,6 +30,9 @@ const Destination = () => {
             </li>
             <li>
                 <Link to="/contact"  className="text-dark">Contact</Link>
+            </li>
+            <li>
+               <h3 className="text-dark ms-2" style={{paddingLeft:450,margin:-30}}>{loggedInUser.name}</h3>
             </li>
             </ul>
           </nav>

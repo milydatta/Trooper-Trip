@@ -2,6 +2,7 @@
        height: 800px;
        background-position: center center;
        background-size: 100% 100%;
+       position: relative;
      }
      .header .logo{
        color:white;

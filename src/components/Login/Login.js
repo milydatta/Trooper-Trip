@@ -28,7 +28,12 @@ const handleGoogleSignIn = () => {
   .signInWithPopup(provider)
   .then((result) => {
         const {displayName, email} = result.user;
-        const signedInUser = {userName: displayName, email}
+        const signedInUser = {
+          // userName: displayName, email
+          isSignedIn: true,
+          name: displayName,
+          email: email
+        }
         setLoggedInUser(signedInUser);
         history.replace(from);
     })
@@ -94,6 +99,7 @@ const handleGoogleSignIn = () => {
                  newUserInfo.error = '';
                  newUserInfo.success = true;
                  setUser(newUserInfo);
+                 setLoggedInUser(newUserInfo);
                 })
                 .catch((error) => {
                 const  newUserInfo = {...user};
